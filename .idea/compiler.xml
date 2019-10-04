@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="libraries" />
+        <module name="mbooks" />
+        <module name="eureka-server" />
+        <module name="config-server" />
+        <module name="zuul-server" />
+        <module name="memail" />
+        <module name="maddress" />
+        <module name="mlending" />
+        <module name="springadmin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="libraries" target="1.8" />
+      <module name="maddress" target="1.8" />
+      <module name="mbooks" target="1.8" />
+      <module name="memail" target="1.8" />
+      <module name="mlending" target="1.8" />
+      <module name="springadmin" target="1.8" />
+      <module name="zuul-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="libraries" options="-parameters" />
+      <module name="maddress" options="-parameters" />
+      <module name="mbooks" options="-parameters" />
+      <module name="memail" options="-parameters" />
+      <module name="mlending" options="-parameters" />
+      <module name="springadmin" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
+    </option>
+  </component>
+</project>

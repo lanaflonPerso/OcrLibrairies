@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-address/maddress.iml" filepath="$PROJECT_DIR$/microservice-address/maddress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-books/mbooks.iml" filepath="$PROJECT_DIR$/microservice-books/mbooks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-email/memail.iml" filepath="$PROJECT_DIR$/microservice-email/memail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-lending/mlending.iml" filepath="$PROJECT_DIR$/microservice-lending/mlending.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springadmin/springadmin.iml" filepath="$PROJECT_DIR$/springadmin/springadmin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
+    </modules>
+  </component>
+</project>
