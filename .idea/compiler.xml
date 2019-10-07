@@ -9,11 +9,10 @@
         <module name="libraries" />
         <module name="mbooks" />
         <module name="eureka-server" />
-        <module name="config-server" />
-        <module name="zuul-server" />
         <module name="memail" />
-        <module name="maddress" />
-        <module name="mlending" />
+        <module name="zuul-server" />
+        <module name="musers" />
+        <module name="config-server" />
         <module name="springadmin" />
       </profile>
     </annotationProcessing>
@@ -25,6 +24,7 @@
       <module name="mbooks" target="1.8" />
       <module name="memail" target="1.8" />
       <module name="mlending" target="1.8" />
+      <module name="musers" target="1.8" />
       <module name="springadmin" target="1.8" />
       <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
@@ -38,6 +38,7 @@
       <module name="mbooks" options="-parameters" />
       <module name="memail" options="-parameters" />
       <module name="mlending" options="-parameters" />
+      <module name="musers" options="-parameters" />
       <module name="springadmin" options="-parameters" />
       <module name="zuul-server" options="-parameters" />
     </option>

@@ -6,12 +6,11 @@
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/libraries/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-address/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-books/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-email/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-lending/pom.xml" />
         <option value="$PROJECT_DIR$/springadmin/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-users/pom.xml" />
       </list>
     </option>
   </component>

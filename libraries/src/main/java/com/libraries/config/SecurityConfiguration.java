@@ -1,7 +1,7 @@
 package com.libraries.config;
 
 
-import com.libraries.service.user.IUsersService;
+import com.users.service.user.IUsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
