@@ -22,15 +22,15 @@ public @Data class Users {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NonNull private String nom;
+    @NonNull private String lastName;
 
-    @NonNull private String prenom;
+    @NonNull private String firstName;
 
     @NonNull private String email;
 
     @NonNull private String password;
 
-    @NonNull private String telephone;
+    @NonNull private String phone;
 
     @NonNull private boolean active;
 
@@ -42,6 +42,11 @@ public @Data class Users {
             inverseJoinColumns=@JoinColumn(name="id_role", referencedColumnName="id")
     )
     @NonNull private  List<Role>  roleList;
+
+    @ManyToOne
+    @JoinColumn(name="id_address", referencedColumnName="id")
+    @NonNull
+    private Address address;
 
 
 

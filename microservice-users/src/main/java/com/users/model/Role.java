@@ -23,7 +23,7 @@ public @Data class Role {
     private String name;
 
 
-    private String libelle;
+    private String wording;
 
 
 
