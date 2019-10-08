@@ -6,10 +6,8 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Hibernate :
@@ -18,7 +16,7 @@ import javax.persistence.Lob;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-public @Data class Photo {
+public @Data class Cover {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -36,9 +34,10 @@ public @Data class Photo {
     private byte[] data;
 
     @NonNull
-    private String utilisation;
+    private String use;
 
-
+    @OneToMany(mappedBy = "cover")
+    private List<Book> bookList;
 
 
 

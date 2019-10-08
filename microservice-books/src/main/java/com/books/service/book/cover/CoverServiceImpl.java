@@ -1,11 +1,12 @@
-package com.books.service.photo;
+package com.books.service.book.cover;
 
 
 
-import com.libraries.exception.FileStorageException;
-import com.libraries.exception.MyFileNotFoundException;
-import com.libraries.model.Photo;
-import com.books.repository.photo.IPhotoRepository;
+import com.books.exceptions.FileStorageException;
+import com.books.exceptions.MyFileNotFoundException;
+import com.books.model.Cover;
+
+import com.books.repository.book.ICoverRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import java.util.List;
  *
  */
 @Service
-public class PhotoServiceImpl implements IPhotoService {
+public class CoverServiceImpl implements ICoverService {
 
     @Value("${data.interval}")
     private Long dataInterval;
@@ -29,14 +30,14 @@ public class PhotoServiceImpl implements IPhotoService {
     private String utilisation;
 
     @Autowired
-    private IPhotoRepository photoRepository;
+    private ICoverRepository coverRepository;
 
 
     /**
      * Récupère les images déstinés à l'affichage du caroussel
      * @return la liste des images pour le caroussel
      */
-    public List<Photo> findAll(){return photoRepository.findAllByUtilisationIs("carousel");}
+    public List<Cover> findAll(){return coverRepository.findAllByUtilisationIs("carousel");}
 
     /**
      * Gère la sauvegarde du fichier en base de données. On vérifie si le fichier est existant et dans le cas contraire
@@ -46,7 +47,7 @@ public class PhotoServiceImpl implements IPhotoService {
      * @return On retourne le fichier si présent en base de données
      * sinon on retourne le nouveau fichier : (entity) Photo
      */
-    public Photo storeFile(MultipartFile file)  {
+    public Cover storeFile(MultipartFile file)  {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
 
         try {
@@ -57,10 +58,10 @@ public class PhotoServiceImpl implements IPhotoService {
             String contentType = file.getContentType();
             byte[] data = file.getBytes();
 
-            Photo photo = photoRepository.findByData( data );
+            Cover cover = coverRepository.findByData( data );
 
-            if(photo != null )
-                return photo;
+            if(cover != null )
+                return cover;
             else
                 return this.save( fileName, contentType,  data );
 
@@ -77,9 +78,9 @@ public class PhotoServiceImpl implements IPhotoService {
      * @param data Le contenu du fichier
      * @return Le nouveau fichier sauvegardé : (entity) Photo
      */
-    public Photo save(String fileName, String contentType, byte[] data) {
-            Photo photo = new Photo(fileName, contentType, data, this.utilisation);
-            return photoRepository.save( photo );
+    public Cover save(String fileName, String contentType, byte[] data) {
+            Cover cover = new Cover(fileName, contentType, data, this.utilisation);
+            return coverRepository.save( cover );
     }
 
     /**
@@ -87,8 +88,8 @@ public class PhotoServiceImpl implements IPhotoService {
      * @param fileId Identifiant du fichier à récupérer
      * @return Le fichier : (entity) Photo
      */
-    public Photo getFile(String fileId) {
-        return photoRepository.findById(fileId)
+    public Cover getFile(String fileId) {
+        return coverRepository.findById(fileId)
                 .orElseThrow(() -> new MyFileNotFoundException("Fichier non trouvé avec l'id " + fileId));
     }
 

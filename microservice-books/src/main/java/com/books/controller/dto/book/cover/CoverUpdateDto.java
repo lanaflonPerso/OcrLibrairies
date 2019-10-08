@@ -1,16 +1,20 @@
-package com.books.controller.dto.photo;
+package com.books.controller.dto.book.cover;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.Setter;
 
+import javax.persistence.Id;
 import javax.persistence.Lob;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class PhotoCreateDto {
+public class CoverUpdateDto {
+
+    @Id
+    private String id;
 
     @NonNull
     private String fileName;
