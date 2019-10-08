@@ -6,14 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="libraries" />
-        <module name="mbooks" />
-        <module name="eureka-server" />
-        <module name="memail" />
-        <module name="zuul-server" />
-        <module name="musers" />
         <module name="config-server" />
-        <module name="springadmin" />
+        <module name="microservice-users" />
+        <module name="microservice-email" />
+        <module name="microservice-books" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,9 +19,13 @@
       <module name="maddress" target="1.8" />
       <module name="mbooks" target="1.8" />
       <module name="memail" target="1.8" />
+      <module name="microservice-books" target="1.8" />
+      <module name="microservice-email" target="1.8" />
+      <module name="microservice-users" target="1.8" />
       <module name="mlending" target="1.8" />
       <module name="musers" target="1.8" />
       <module name="springadmin" target="1.8" />
+      <module name="web-libraries" target="1.8" />
       <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -37,9 +37,13 @@
       <module name="maddress" options="-parameters" />
       <module name="mbooks" options="-parameters" />
       <module name="memail" options="-parameters" />
+      <module name="microservice-books" options="-parameters" />
+      <module name="microservice-email" options="-parameters" />
+      <module name="microservice-users" options="-parameters" />
       <module name="mlending" options="-parameters" />
       <module name="musers" options="-parameters" />
       <module name="springadmin" options="-parameters" />
+      <module name="web-libraries" options="-parameters" />
       <module name="zuul-server" options="-parameters" />
     </option>
   </component>
