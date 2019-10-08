@@ -1,5 +1,6 @@
-package com.users.model;
+package com.users.model.address;
 
+import com.users.model.user.Users;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;

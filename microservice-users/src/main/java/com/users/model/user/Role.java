@@ -1,4 +1,4 @@
-package com.users.model;
+package com.users.model.user;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

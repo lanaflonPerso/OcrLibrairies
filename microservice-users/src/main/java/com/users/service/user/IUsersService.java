@@ -2,7 +2,7 @@ package com.users.service.user;
 
 
 
-import com.users.model.Users;
+import com.users.model.user.Users;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.users.service.user.role;
 
 
 
-import com.users.model.Role;
+import com.users.model.user.Role;
 import com.users.repository.user.IRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,51 +21,14 @@ public class RoleServiceImpl implements IRoleService {
     @Autowired
     IRoleRepository roleRepository;
 
-    @Value("${user.role}")
-    private String role;
-
-    /**
-     * cherche un role utilisateur
-     * @param id Id du role utilisateur à chercher
-     * @return Le role utilisateur (entity)Role
-     */
-    public Role findRole(Long id) {
-        return roleRepository.findRoleById( id );
+    public List<Role> findAll(){
+        return roleRepository.findAll();
     }
 
-    /**
-     * cherche un role utilisateur
-     * @param name Nom du role utilisateur
-     * @return Le role utilisateur (entity)Role
-     */
-    public Role findRole(String name) {
-        return roleRepository.findRoleByName( name );
+    public void save(Role role){
+        roleRepository.save( role );
     }
 
-    /**
-     * Converti (entity) Role par defaut en ArraysList
-     * @return ArraysList (entity) Role
-     */
-    public List<Role> findListRole(){
-        return Arrays.asList( roleRepository.findRoleByName( this.role ) );
-    }
 
-    /**
-     * Converti (entity) Role en ArraysList
-     * @param id Id du role à convertir
-     * @return ArraysList (entity) Role
-     */
-    public List<Role> findListRole(Long id){
-        return Arrays.asList( roleRepository.findRoleById( id ) );
-    }
-
-    /**
-     * Cherche un role
-     * @param name Nom du role
-     * @return ArraysList (entity) Role
-     */
-    public List<Role> findListRole(String name){
-        return Arrays.asList( roleRepository.findRoleByName( name ) );
-    }
 
 }

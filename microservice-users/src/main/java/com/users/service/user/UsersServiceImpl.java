@@ -3,7 +3,7 @@ package com.users.service.user;
 
 
 
-import com.users.model.Users;
+import com.users.model.user.Users;
 import com.users.repository.user.IUsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
@@ -28,7 +28,6 @@ public class UsersServiceImpl implements IUsersService {
      * On recherche la liste de tous les utilisateurs
      * @return La liste des utilisateurs
      */
-    @Secured("ROLE_ADMIN")
     public List<Users> findAll(){
         return usersRepository.findAll();
     }
