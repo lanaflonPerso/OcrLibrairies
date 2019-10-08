@@ -1,8 +1,7 @@
 package com.users.service.user.role;
 
 
-
-import com.libraries.model.Role;
+import com.users.model.Role;
 
 import java.util.List;
 

@@ -1,7 +1,8 @@
 package com.users.service.user.role;
 
 
-import com.libraries.model.Role;
+
+import com.users.model.Role;
 import com.users.repository.user.IRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
