@@ -10,8 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
-@EnableFeignClients("com.library")
 @EnableConfigurationProperties
 @EnableDiscoveryClient
 public class LibraryWebApplication {
