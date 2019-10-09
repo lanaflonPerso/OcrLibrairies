@@ -1,6 +1,7 @@
 package com.library.controller;
 
 import com.library.beans.mbooks.book.LanguageBean;
+import com.library.exception.ResourceNotFoundException;
 import com.library.proxies.IMicroserviceBooksProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,10 @@ public class ClientController {
 
         List<LanguageBean> languageList =  booksProxy.languageList();
 
-        model.addAttribute( "languageList",languageList );
+
+
+
+         model.addAttribute( "languageList",languageList );
 
         return "index";
     }
