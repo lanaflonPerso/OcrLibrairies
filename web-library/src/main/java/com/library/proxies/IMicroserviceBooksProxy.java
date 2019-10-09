@@ -9,6 +9,6 @@ import java.util.List;
 @FeignClient(name = "microservice-books", url = "localhost:9001")
 public interface IMicroserviceBooksProxy {
 
-    @GetMapping( "/Language/all")
+    @GetMapping(value = "/Language/all")
     List<LanguageBean> languageList();
 }

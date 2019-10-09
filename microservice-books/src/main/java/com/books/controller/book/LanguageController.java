@@ -23,7 +23,7 @@ public class LanguageController {
     public List<Language> languageList(){
 
         List<Language> addressList = languageService.findAll();
-        if (addressList.isEmpty()) throw new ResourceNotFoundException( "Aucun utilisateur trouvé");
+        if (addressList.isEmpty()) throw new ResourceNotFoundException( "Aucun langage trouvé");
 
         return addressList;
     }

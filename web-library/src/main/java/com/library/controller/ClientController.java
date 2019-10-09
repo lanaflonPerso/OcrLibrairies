@@ -19,7 +19,7 @@ public class ClientController {
 
         List<LanguageBean> languageList =  booksProxy.languageList();
 
-        model.addAttribute( languageList );
+        model.addAttribute( "languageList",languageList );
 
         return "index";
     }
