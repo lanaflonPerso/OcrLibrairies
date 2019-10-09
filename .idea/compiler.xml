@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-email" />
+        <module name="gateway" />
         <module name="eureka-server" />
         <module name="config-server" />
         <module name="microservice-users" />
@@ -17,6 +18,7 @@
     <bytecodeTargetLevel>
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="gateway" target="1.8" />
       <module name="libraries" target="1.8" />
       <module name="maddress" target="1.8" />
       <module name="mbooks" target="1.8" />
@@ -36,6 +38,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="libraries" options="-parameters" />
       <module name="maddress" options="-parameters" />
       <module name="mbooks" options="-parameters" />
