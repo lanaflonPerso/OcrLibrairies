@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="web-library" />
+        <module name="microservice-email" />
+        <module name="eureka-server" />
         <module name="config-server" />
         <module name="microservice-users" />
-        <module name="microservice-email" />
+        <module name="web-library" />
         <module name="microservice-books" />
       </profile>
     </annotationProcessing>

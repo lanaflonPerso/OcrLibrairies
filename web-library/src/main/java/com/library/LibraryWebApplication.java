@@ -12,10 +12,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableFeignClients("com.library")
 @EnableDiscoveryClient
-public class LibrariesApplication {
+public class LibraryWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LibrariesApplication.class, args);
+		SpringApplication.run(LibraryWebApplication.class, args);
 	}
 
 	@Bean
