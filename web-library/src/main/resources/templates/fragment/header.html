@@ -18,7 +18,7 @@
                 <img th:src="@{/img/logo-small.png}" th:href="@{/}" class="align-self-center mr-3" alt="logo amis de l'escalade"/>
             </a>
             <a sec:authorize="isAnonymous()" class="nav-link text-muted w-25" th:href="@{/registration}">S'inscrire</a>
-            <a sec:authorize="isAuthenticated()" class="nav-link text-muted w-25" th:href="@{/profil}"  >Bienvenue <span th:text="${IUserService.currentUserPrenom()}"></span>, </a>
+            <a sec:authorize="isAuthenticated()" class="nav-link text-muted w-25" th:href="@{/profil}"  >Bienvenue , </a>
 
             <div class="collapse navbar-collapse" id="navbarsClimbing">
                 <ul class="navbar-nav mr-auto">

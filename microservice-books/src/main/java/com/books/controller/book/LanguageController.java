@@ -20,7 +20,7 @@ public class LanguageController {
     private ILanguageService languageService;
 
     @GetMapping("/all")
-    public List<Language> languageListList(){
+    public List<Language> languageList(){
 
         List<Language> addressList = languageService.findAll();
         if (addressList.isEmpty()) throw new ResourceNotFoundException( "Aucun utilisateur trouvé");
