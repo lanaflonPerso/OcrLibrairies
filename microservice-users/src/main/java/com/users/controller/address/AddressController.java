@@ -1,4 +1,4 @@
-package com.users.controller;
+package com.users.controller.address;
 
 import com.users.controller.dto.address.AddressCreateDto;
 import com.users.controller.dto.address.AddressUpdateDto;

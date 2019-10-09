@@ -1,6 +1,6 @@
 package com.books.service.book.author;
 
-import com.books.model.Author;
+import com.books.model.book.Author;
 
 import java.util.List;
 

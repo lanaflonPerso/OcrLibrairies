@@ -1,6 +1,6 @@
 package com.books.controller.dto.book;
 
-import com.books.model.Cover;
+import com.books.model.book.Cover;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

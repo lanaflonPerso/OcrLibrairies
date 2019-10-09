@@ -1,6 +1,6 @@
 package com.books.service.book.language;
 
-import com.books.model.Language;
+import com.books.model.book.Language;
 import com.books.repository.book.ILanguageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

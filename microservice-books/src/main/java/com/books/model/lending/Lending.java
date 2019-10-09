@@ -1,4 +1,4 @@
-package com.books.model;
+package com.books.model.lending;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

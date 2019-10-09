@@ -1,4 +1,4 @@
-package com.users.controller;
+package com.users.controller.address;
 
 import com.users.controller.dto.city.CityDto;
 import com.users.exceptions.ResourceNotFoundException;

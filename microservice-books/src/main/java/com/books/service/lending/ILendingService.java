@@ -1,6 +1,6 @@
 package com.books.service.lending;
 
-import com.books.model.Lending;
+import com.books.model.lending.Lending;
 
 import java.util.List;
 

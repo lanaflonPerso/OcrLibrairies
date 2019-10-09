@@ -1,6 +1,6 @@
 package com.books.service.lending;
 
-import com.books.model.Lending;
+import com.books.model.lending.Lending;
 import com.books.repository.lending.ILendingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

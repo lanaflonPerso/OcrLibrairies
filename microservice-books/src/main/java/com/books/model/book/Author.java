@@ -1,4 +1,4 @@
-package com.books.model;
+package com.books.model.book;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,21 +6,22 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-public @Data class Theme {
-
+public @Data class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NonNull
-    private String value;
+    private String lastName;
 
-    @OneToMany(mappedBy = "theme")
+    @NonNull
+    private String firstName;
+
+    @OneToMany(mappedBy = "author")
     private List<Book> bookList;
 }

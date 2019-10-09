@@ -2,7 +2,7 @@ package com.books.service.book.cover;
 
 
 
-import com.books.model.Cover;
+import com.books.model.book.Cover;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;

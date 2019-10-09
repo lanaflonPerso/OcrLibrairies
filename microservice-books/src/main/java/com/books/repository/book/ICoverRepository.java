@@ -2,7 +2,7 @@ package com.books.repository.book;
 
 
 
-import com.books.model.Cover;
+import com.books.model.book.Cover;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

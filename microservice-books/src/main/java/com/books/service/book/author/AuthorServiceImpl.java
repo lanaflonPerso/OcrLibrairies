@@ -1,6 +1,6 @@
 package com.books.service.book.author;
 
-import com.books.model.Author;
+import com.books.model.book.Author;
 import com.books.repository.book.IAuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

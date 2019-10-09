@@ -1,4 +1,4 @@
-package com.books.model;
+package com.books.model.book;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,17 +11,15 @@ import java.util.List;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-public @Data class Author {
+public @Data class Language {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NonNull
-    private String lastName;
+    private String value;
 
-    @NonNull
-    private String firstName;
-
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "language")
     private List<Book> bookList;
 }

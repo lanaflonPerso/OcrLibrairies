@@ -1,5 +1,6 @@
-package com.books.model;
+package com.books.model.book;
 
+import com.books.model.lending.Lending;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;

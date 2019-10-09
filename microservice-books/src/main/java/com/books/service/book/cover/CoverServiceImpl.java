@@ -4,7 +4,7 @@ package com.books.service.book.cover;
 
 import com.books.exceptions.FileStorageException;
 import com.books.exceptions.MyFileNotFoundException;
-import com.books.model.Cover;
+import com.books.model.book.Cover;
 
 import com.books.repository.book.ICoverRepository;
 import org.springframework.beans.factory.annotation.Autowired;

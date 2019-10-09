@@ -1,4 +1,4 @@
-package com.users.controller;
+package com.users.controller.user;
 
 
 import com.users.exceptions.ResourceNotFoundException;
