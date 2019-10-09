@@ -1,6 +1,6 @@
 package com.library;
 
-import brave.sampler.Sampler;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -18,9 +18,11 @@ public class LibraryWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LibraryWebApplication.class, args);
 	}
-
+/*
 	@Bean
 	public Sampler defaultSampler(){
 		return Sampler.ALWAYS_SAMPLE;
 	}
+
+ */
 }
