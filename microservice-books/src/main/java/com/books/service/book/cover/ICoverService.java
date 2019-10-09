@@ -14,5 +14,5 @@ public interface ICoverService {
     Cover save(String fileName, String contentType, byte[] data);
     Cover storeFile(MultipartFile file);
     Cover getFile(String fileId);
-    Long getDataInterval();
+    Long getCarousselInterval();
 }

@@ -2,6 +2,7 @@ package com.books.service.book.cover;
 
 
 
+import com.books.config.ApplicationPropertiesConfig;
 import com.books.exceptions.FileStorageException;
 import com.books.exceptions.MyFileNotFoundException;
 import com.books.model.book.Cover;
@@ -23,21 +24,18 @@ import java.util.List;
 @Service
 public class CoverServiceImpl implements ICoverService {
 
-    @Value("${data.interval}")
-    private Long dataInterval;
-
-    @Value("${data.photo.utilisation}")
-    private String utilisation;
-
     @Autowired
     private ICoverRepository coverRepository;
+
+    @Autowired
+    private ApplicationPropertiesConfig appPropertiesConfig;
 
 
     /**
      * Récupère les images déstinés à l'affichage du caroussel
      * @return la liste des images pour le caroussel
      */
-    public List<Cover> findAll(){return coverRepository.findAllByUtilisationIs("carousel");}
+    public List<Cover> findAll(){return coverRepository.findAllByUseIs("carousel");}
 
     /**
      * Gère la sauvegarde du fichier en base de données. On vérifie si le fichier est existant et dans le cas contraire
@@ -79,7 +77,8 @@ public class CoverServiceImpl implements ICoverService {
      * @return Le nouveau fichier sauvegardé : (entity) Photo
      */
     public Cover save(String fileName, String contentType, byte[] data) {
-            Cover cover = new Cover(fileName, contentType, data, this.utilisation);
+            Cover cover = new Cover(fileName, contentType, data, appPropertiesConfig.getCoverUse() );
+
             return coverRepository.save( cover );
     }
 
@@ -97,7 +96,7 @@ public class CoverServiceImpl implements ICoverService {
      * Getter
      * @return Retourne le timer du caroussel. Paramètre par défaut  application.properties : data.interval
      */
-    public Long getDataInterval() {
-        return dataInterval;
+    public Long getCarousselInterval() {
+        return appPropertiesConfig.getCarousselInterval();
     }
 }
