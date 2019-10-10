@@ -14,6 +14,7 @@ public class MainController {
 
     @Autowired
     private IMicroserviceBooksProxy microserviceBooksProxy;
+
     @GetMapping("/erreur")
     public String erreur(Model model){
         return "error/denied";
@@ -26,7 +27,7 @@ public class MainController {
 
     @GetMapping("/")
     private String accueil(Model model){
-        List<LanguageBean> languageList =microserviceBooksProxy.languageList();
+        List<LanguageBean> languageList = microserviceBooksProxy.languageList();
         model.addAttribute("languageList",languageList);
 
         return "index";

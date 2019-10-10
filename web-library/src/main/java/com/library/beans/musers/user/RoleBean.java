@@ -1,13 +1,12 @@
 package com.library.beans.musers.user;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
-@Getter
-@Setter
-public class RoleBean {
+public  @Data class RoleBean {
     private Long id;
 
     private String name;

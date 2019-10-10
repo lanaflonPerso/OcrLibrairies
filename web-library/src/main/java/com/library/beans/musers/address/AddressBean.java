@@ -1,6 +1,7 @@
 package com.library.beans.musers.address;
 
 import com.library.beans.musers.user.UsersBean;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,9 +9,7 @@ import lombok.Setter;
 import java.util.List;
 
 @NoArgsConstructor
-@Getter
-@Setter
-public class AddressBean {
+public  @Data class AddressBean {
 
     private Long id;
 

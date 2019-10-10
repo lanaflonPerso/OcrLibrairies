@@ -1,5 +1,6 @@
 package com.library.beans.mbooks.book;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,9 +9,7 @@ import java.util.List;
 
 
 @NoArgsConstructor
-@Getter
-@Setter
-public class LanguageBean {
+public  @Data class LanguageBean {
 
     private Long id;
 
