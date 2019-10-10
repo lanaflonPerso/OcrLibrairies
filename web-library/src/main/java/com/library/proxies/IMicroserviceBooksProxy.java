@@ -12,6 +12,6 @@ import java.util.List;
 @RibbonClient("microservice-books")
 public interface IMicroserviceBooksProxy {
 
-    @GetMapping( "/Language/all")
+    @GetMapping(value = "/Language/all")
     List<LanguageBean> languageList();
 }
