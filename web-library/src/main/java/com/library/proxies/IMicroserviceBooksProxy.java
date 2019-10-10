@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient(name = "zuul-server")
+@FeignClient(name = "microservice-books")
 @RibbonClient("microservice-books")
 public interface IMicroserviceBooksProxy {
 
