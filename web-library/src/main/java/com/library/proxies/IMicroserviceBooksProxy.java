@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient(name = "microservice-books")
+@FeignClient(name = "zuul-server")
 @RibbonClient("microservice-books")
 public interface IMicroserviceBooksProxy {
 
-    @GetMapping(value = "/Language/all")
+    @GetMapping(value = "/microservice-books/Language/all")
     List<LanguageBean> languageList();
 }
