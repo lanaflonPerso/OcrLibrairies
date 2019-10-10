@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Users")
+@RequestMapping("/User")
 public class UsersController {
 
     @Autowired
@@ -28,10 +28,10 @@ public class UsersController {
         return usersList;
     }
 
-    @GetMapping("/connection/{id}")
-    public Users user(@PathVariable("id") String email){
+    @GetMapping(value = "/connection/{id}")
+    public Users user(@PathVariable String  id){
 
-        return usersService.findUser( email );
+        return usersService.findUser( id );
 
     }
 
