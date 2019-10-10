@@ -1,6 +1,6 @@
 
 
-insert into "role" (id,name,libelle)
+insert into "role" (id,name,wording)
 VALUES
 (1,'ROLE_ADMIN','Administrateur'),
 (2,'ROLE_ACTUATOR','Membre'),
@@ -9,7 +9,7 @@ VALUES
 
 /*  Insert USERS */
 INSERT INTO "users"
-(id,email,active,nom,password,prenom,telephone)
+(id,email,active,last_name,password,first_name,phone)
 VALUES
 (1,'admin@gmail.com',
 true,'ADMIN','$2a$10$mVLweGs6HLxItvuYt5W21e9sr7sgkqeuk6q.3pke4HEHJZry4fWSO',

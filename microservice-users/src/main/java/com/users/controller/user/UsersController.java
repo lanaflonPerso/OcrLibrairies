@@ -1,7 +1,5 @@
 package com.users.controller.user;
 
-
-
 import com.users.controller.dto.user.UserCreateDto;
 import com.users.controller.dto.user.UserUpdateDto;
 import com.users.exceptions.ResourceNotFoundException;
@@ -15,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/User")
+@RequestMapping("/Users")
 public class UsersController {
 
     @Autowired
@@ -29,6 +27,15 @@ public class UsersController {
 
         return usersList;
     }
+
+    @GetMapping("/connection/{id}")
+    public Users user(@PathVariable("id") String email){
+
+        return usersService.findUser( email );
+
+    }
+
+
 
     @PostMapping
     public void newUser(@DTO(UserCreateDto.class) Users user) {

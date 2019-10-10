@@ -10,7 +10,6 @@ import com.users.technical.authentificationfacade.IAuthenticationFacade;
 import com.users.technical.rolechecker.IRoleChecker;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -63,10 +62,6 @@ public class UsersServiceImpl implements IUsersService {
     public List<Users> findAll(){
         return usersRepository.findAll();
     }
-
-
-
-
 
 
     public void save( Users user){
@@ -280,6 +275,7 @@ public class UsersServiceImpl implements IUsersService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
+        System.out.println("email : " + email);
         Users user = usersRepository.findByEmailAndActiveTrue(email);
         if (user == null) {
             throw new UsernameNotFoundException("Utilisateur ou mot de passe incorrect.");

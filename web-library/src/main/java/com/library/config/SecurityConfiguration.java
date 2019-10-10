@@ -1,6 +1,8 @@
 package com.library.config;
 
 
+
+import com.library.service.IUsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +23,8 @@ import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-
+    @Autowired
+    IUsersService usersService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -65,11 +68,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-/*
+
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
+
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-        auth.setUserDetailsService(userService);
+        auth.setUserDetailsService( usersService );
         auth.setPasswordEncoder(passwordEncoder());
         return auth;
     }
@@ -78,7 +82,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
     }
-**/
+
     @Bean
     public SpringSecurityDialect securityDialect() {
         return new SpringSecurityDialect();
