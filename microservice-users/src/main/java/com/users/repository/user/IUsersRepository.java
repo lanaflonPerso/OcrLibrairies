@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IUsersRepository extends JpaRepository<Users,Long > {
 
-
+Users findByEmailAndActiveTrue(String email);
 
 }
