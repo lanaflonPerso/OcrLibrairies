@@ -10,7 +10,6 @@ import java.util.List;
 
 @FeignClient(name = "zuul-server")
 @RibbonClient("microservice-books")
-@RequestMapping("/microservice-books")
 public interface IMicroserviceBooksProxy {
 
     @GetMapping( "/Language/all")
